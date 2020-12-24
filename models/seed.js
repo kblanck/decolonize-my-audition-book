@@ -21,12 +21,12 @@ const seed = [
         name: 'Benjamin Velez',
         identity: 'Latinx',
         knownFor: 'Kiss My Aztec',
-        youTube: 'https://www.youtube.com/watch?list=PLpTuf06-V9xtjR7__kz2p8q-1YRSf0Qlq&v=40bUwx0yqjk',
+        youTube: 'https://www.youtube.com/watch?v=mt0Pi_jXa9M',
         social: 'test'
     },
     {
         name: 'Shaun Taylor-Corbett',
-        identity: 'Native American',
+        identity: 'Indigenous',
         knownFor: 'Distant Thunder',
         youTube: 'https://www.youtube.com/watch?v=AWFb2q998q8',
         social: 'test'
@@ -40,4 +40,13 @@ const seed = [
     }
 ];
 
+// const asianWriters = seed.filter((writer) => {
+//     if (writer.identity === 'Asian') {
+//         return writer
+//     }
+// });
+
+// console.log(asianWriters);
+
 module.exports = seed;
+// module.exports = asianWriters;

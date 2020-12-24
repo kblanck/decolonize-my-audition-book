@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include( 'partials/head.ejs' ) %>
 </head>
 <body>
-    <h1>Writer Show Page</h1>
-    <%=writer.name%>        <br/>
-    <%=writer.identity%>    <br/>
-    <%=writer.knownFor%>    <br/>
+
+    <header>
+        <%- include( 'partials/header.ejs' ) %>
+    </header>
+    
+    <h2><%=writer.name%></h2>
+    <br/>
+    <br/>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=writer.youTube.slice(32)%>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br/>
+    <br/>
+
+    <!-- <b>Identity:</b> <%=writer.identity%>
+    <br/> -->
+
+    <b>Known For:</b> <%=writer.knownFor%>
+    <br/>
+    
     <%=writer.socials%>     <br/> <br/>
 
-    <iframe width="560" height="315" src="<%=writer.youTube%>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-    <br/><br/>
 
     <nav>
         <a href="/writers">Back to Writers Index</a>

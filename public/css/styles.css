@@ -1,0 +1,209 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Raleway', serif;
+    color: #250728;
+    background-color: whitesmoke;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lexend Zetta', serif;
+}
+
+h1 > span {
+    font-size: 3em;
+}
+
+#show-page-h1 {
+    font-size: 2em;
+}
+
+h2 {
+    padding: .5em;
+    background-color: #65183e;
+    color: whitesmoke;
+    /* transform: rotate(-3deg); */
+}
+
+h3 {
+    padding: 1em;
+    background-color: #D4AF37;
+    color: black;
+    transform: rotate(3deg);
+    font-size: 1em;
+}
+
+h4 {
+    margin-top: 5em;
+    padding: 1em;
+    background-color: #D4AF37;
+    color: black;
+    transform: rotate(-4deg);
+    font-size: .75em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+ 
+.selections {
+    width: 100%;
+    height: 80%;
+    padding-top: 1.5em;
+}
+
+.button {
+    width: 450px;
+    height: 50px;
+    background: #250728;
+    font-family: 'Raleway', serif;
+    font-size: 1.25em;
+    color: whitesmoke;
+    border: 0px;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    margin: 1em;
+    padding: 0;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: whitesmoke;
+    border: 1px solid #250728;
+    color: #250728;
+}
+
+.button-name {
+    width: 450px;
+    height: 50px;
+    background:white;
+    font-family: 'Raleway', serif;
+    font-size: 1.5em;
+    color: black;
+    border: 1px solid #250728;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    margin: 1em;
+    padding: 0;
+}
+
+.button-name {
+    cursor: pointer;
+}
+
+.nav-button {
+    width: 200px;
+    height: 50px;
+    background: #250728;
+    font-family: 'Raleway', serif;
+    font-size: 1em;
+    color: whitesmoke;
+    border: 0px;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    margin: 1em;
+    padding: 0;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    background: whitesmoke;
+    border: 1px solid #250728;
+    color: #250728;
+}
+
+.nav-button:focus {
+    outline: 0;
+}
+
+.writer {
+    font-family: 'Raleway', serif;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 150px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav {
+    padding-top: 1em;
+}
+
+#add-new {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 80%;
+    padding-top: 1.5em;
+}
+
+#input-name {
+    margin-bottom: 1.5em;
+}
+
+#identify-label {
+    display: flex;
+    align-self: left;
+    width: 280px;
+    background-color: #65183e;
+    color: whitesmoke;
+    font-family: 'Lexend Zetta', serif;
+    font-size: 1em;
+    padding: .2em .5em;
+    margin: 0 .5em .5em .1em;
+}
+
+input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+  }
+
+select {
+    width: 103%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+  }
+
+
+select,input:focus {
+    outline: 0;
+  }
+
+footer {
+    font-size: 1em;
+    padding: 3em;
+    color: black;
+}
+/* 
+#credits {
+    font-size: .75em;
+    background: darkgold;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: .8em;
+} */

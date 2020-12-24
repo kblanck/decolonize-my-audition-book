@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include( 'partials/head.ejs' ) %>
+</head>
+<body>
+
+    <header>
+        <%- include( 'partials/header.ejs' ) %>
+    </header>
+
+    <h2>Indigenous Composers & Lyricists</h2>
+    <% for(let i = 0; i < writers.length; i++){ %>
+        <a href="/writers/<%=writers[i].id; %>">
+        <button class="button-name">
+            <%=writers[i].name; %>  
+        </button>
+    </a>
+    <% } %>
+    <footer>
+        <%- include( 'partials/footer.ejs' ) %>
+    </footer>
+</body>
+</html>

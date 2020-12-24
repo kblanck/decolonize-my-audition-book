@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include( 'partials/head.ejs' ) %>
 </head>
 <body>
-    <h1>Writer Index Page</h1>
-    <ul>
-        <% for(let i = 0; i < writers.length; i++){ %>
-            <li>
-                <a href="/writers/<%=writers[i].id; %>">
-                <%=writers[i].name; %>
-                </a>    
-            </li>
-        <% } %>
-    </ul>
-    <nav>
-        <a href="/writers/new">Add a New Writer</a>
-    </nav>
+    <h1>
+        <span>DECOLONIZE</span>
+        <br/>
+        my audition book</h1>
+        <h3>for Black, Indigenous, and POC <br/>
+            musical theater actors 🎵</h3>
+
+     <div class="selections">
+        <a href="/writers/index_black_writers">
+            <button class="button">
+                Black Composers & Lyricists
+            </button>
+        </a>
+
+
+        <a href="/writers/index_AAPI_writers">
+            <button class="button">
+                Asian & Asian-American Composers & Lyricists
+            </button>
+        </a>
+      
+
+        <a href="/writers/index_indigenous_writers">
+            <button class="button">
+                Indigenous Composers & Lyricists
+            </button>
+            </a>
+      
+
+        <a href="/writers/index_latinx_writers">
+            <button class="button">
+                Latinx Composers & Lyricists
+            </button>
+        </a>                         
+       
+
+        <a href="/writers/index_menasa_writers">
+            <button class="button">
+                MENASA Composers & Lyricists
+            </button>
+        </a>                       
+    </div>
+
+    <h4>
+        <a href="">credits</a>
+    </h4>
 </body>
 </html>

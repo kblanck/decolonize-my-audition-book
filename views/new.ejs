@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include( 'partials/head.ejs' ) %>
 </head>
 <body>
-    <h1>New Writer Page</h1>
+
+    <header>
+        <%- include( 'partials/header.ejs' ) %>
+    </header>
+
+    <h2>
+        Add a New Composer or Lyricist
+    </h2>
+
+    <div id="add-new">
     <form action="/writers" method="POST">
-        Name: <input type="text" name="name" /><br/>
-        Identity: <input type="text" name="identity" /><br/>
-        Known For: <input type="text" name="knownFor" /><br/>
-        YouTube Sample: <input type="text" name="youTube" /><br/>
-        Social Media: <input type="text" name="social" /><br/>
-        <input type="submit" name="" value="Add New Writer"/>
+       <input id="input-name" type="text" name="name" value="Name"/><br/>
+
+        <label for="identity">
+            <span id="identify-label">
+                 How do they identify? 
+            </span></label>
+       <select id="identity" name="identity" placeholder="Identity">
+        <option value="Black">Black</option>
+        <option value="Asian">Asian or Asian-American</option>
+        <option value="Indigenous">Indigenous</option>
+        <option value="Latinx">Latinx</option>
+        <option value="MENASA">MENASA</option>
+      </select>
+    </span>
+        <!-- <input type="text" name="identity" value="Identity"/><br/> -->
+        <input type="text" name="knownFor" value="What's a musical they're known for?" /><br/>
+        <input type="text" name="youTube" value="Enter the URL of a YouTube sample!" /><br/>
+        <input type="text" name="social" value="What's their Twitter handle?"/><br/>
+        <input id="submit" type="submit" class="button" name="" value="Add New Writer"/>
     </form>
+    </div>
 </body>
 </html>
