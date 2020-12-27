@@ -10,6 +10,11 @@ router.get('/writers/seed', (req, res) => {
     })
 });
 
+// CREDITS PAGE
+router.get('/writers/credits', (req, res) => {
+    res.render('credits.ejs')
+});
+
 //CREATE ROUTE
 router.get('/writers/new', (req, res) => {
     res.render('new.ejs')
@@ -38,9 +43,9 @@ router.get('/writers/index_black_writers', (req, res) => {
     })
 });
 
-router.get('/writers/index_AAPI_writers', (req, res) => {
+router.get('/writers/index_asian_writers', (req, res) => {
     Writer.find({ identity: 'Asian' },(error, asianWriters) => {
-        res.render('index_AAPI_writers.ejs', {
+        res.render('index_asian_writers.ejs', {
             writers: asianWriters
         })
     })
@@ -71,12 +76,37 @@ router.get('/writers/index_menasa_writers', (req, res) => {
     })
 });
 
+// DELETE ROUTE
+router.delete('/writers/:id', (req, res) => {
+    Writer.findByIdAndRemove(req.params.id, (error, data) => {
+        res.redirect('/writers');
+    })
+});
+
 // SHOW ROUTE
 router.get('/writers/:id', (req, res) => {
     Writer.findById(req.params.id, (error, foundWriter) => {
         res.render('show.ejs', {
             writer: foundWriter
         })
+    })
+});
+
+// EDIT ROUTE
+router.get('/writers/:id/edit', (req, res) => {
+    Writer.findById(req.params.id, (error, foundWriter) => {
+        res.render(
+            'edit.ejs',
+            {
+                writer: foundWriter
+            }
+        )
+    })
+});
+
+router.put('/writers/:id', (req, res) => {
+    Writer.findByIdAndUpdate(req.params.id, req.body, (error, updatedModel) => {
+        res.redirect('/writers/:id')
     })
 });
 

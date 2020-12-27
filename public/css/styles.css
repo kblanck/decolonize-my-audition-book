@@ -8,7 +8,7 @@ body {
     background-color: whitesmoke;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6, p {
     font-family: 'Lexend Zetta', serif;
 }
 
@@ -42,6 +42,28 @@ h4 {
     color: black;
     transform: rotate(-4deg);
     font-size: .75em;
+}
+
+h5 {
+    padding: 1em;
+    background-color: white;
+    color: black;
+    /* transform: rotate(-3deg); */
+    font-size: .8em;
+    /* border: 1px solid gray; */
+}
+
+h6 {
+    margin-top: -.5em;
+    padding: 1em;
+    background-color: #D4AF37;
+    color: black;
+    /* transform: rotate(3deg); */
+    font-size: 1em;
+}
+
+p {
+    font-size: 1em;
 }
 
 a {
@@ -103,6 +125,25 @@ a:hover{
     cursor: pointer;
 }
 
+.delete {
+    width: 90px;
+    height: 50px;
+    background: #D0312D;
+    font-family: 'Raleway', serif;
+    font-size: 1em;
+    color: whitesmoke;
+    border: 0px;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    margin: .6em;
+}
+
+.delete:hover {
+    cursor: pointer;
+    background: #E3242B;
+    color: whitesmoke;
+}
+
 .nav-button {
     width: 200px;
     height: 50px;
@@ -113,7 +154,7 @@ a:hover{
     border: 0px;
     border-radius: 8px;
     transition: 0.2s ease-in-out;
-    margin: 1em;
+    margin: 0 1em 1em 1em;
     padding: 0;
 }
 
@@ -149,6 +190,21 @@ nav {
     padding-top: 1em;
 }
 
+#show-little-bio {
+    display: flex;
+}
+
+#edit-delete {
+    display: flex;
+    flex-direction: row;
+}
+
+#known-for, #notable-awards, #social-media {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2em;;
+}
+
 #add-new {
     display: flex;
     flex-direction: column;
@@ -164,13 +220,14 @@ nav {
 #identify-label {
     display: flex;
     align-self: left;
-    width: 280px;
-    background-color: #65183e;
-    color: whitesmoke;
+    width: 350px;
+    text-align: left;
+    background-color: white;
+    color: black;
     font-family: 'Lexend Zetta', serif;
     font-size: 1em;
-    padding: .2em .5em;
-    margin: 0 .5em .5em .1em;
+    padding: .5em;
+    margin: 0 .5em 0em .1em;
 }
 
 input {
@@ -197,13 +254,39 @@ footer {
     padding: 3em;
     color: black;
 }
-/* 
+
 #credits {
-    font-size: .75em;
-    background: darkgold;
-    color: black;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: .8em;
-} */
+    text-align: left;
+    font-family: Arial;
+    color: darkslategray;
+    width: 60%;
+    height: 60%;
+    line-height: 1.5;
+    margin: 2em 0 3em 0;
+}
+
+#phrase {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+
+    }
+
+    h1 > span {
+        font-size: 1.7em;
+    }
+
+    #show-page-h1 {
+        font-size: 1.7em;
+    }
+
+    h4 {
+        margin-top: 1.5em;
+        font-size: 1em;
+    }
+  }
+
+  

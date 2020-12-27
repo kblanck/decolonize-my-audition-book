@@ -10,18 +10,18 @@
     </header>
 
     <h2>
-        Add a New Composer or Lyricist to the Database
+        Edit a Composer or Lyricist in the Database
     </h2>
 
     <div id="add-new">
-    <form action="/writers" method="POST">
+    <form action="/writers/<%=writer.id%>?_method=PUT" method="POST">
         <label for="identity">
             <span id="identify-label">
                  What's their name? 
             </span></label>
-       <input id="input-name" type="text" name="firstName" placeholder="First name"/>
-       <input id="input-name" type="text" name="middle" placeholder="Middle name or initial"/>
-       <input id="input-name" type="text" name="lastName" placeholder="Last name"/><br/>
+       <input id="input-name" type="text" name="firstName" placeholder="<%=writer.firstName%>"/>
+       <input id="input-name" type="text" name="middle" placeholder="<%=writer.middle%>"/>
+       <input id="input-name" type="text" name="lastName" placeholder="<%=writer.lastName%>"/><br/>
         <label for="identity">
             <span id="identify-label">
                  How do they identify? 
@@ -74,8 +74,14 @@
                 </span></label>        
             <input type="text" name="socialHandle" placeholder="@" /><br/>
 
-        <input id="submit" type="submit" class="button" name="" value="Add New Writer"/>
+        <input id="submit" type="submit" class="button" name="" value="Submit Changes"/>
     </form>
+
+    <a href="/writers/index_<%=writer.identity%>_writers">
+        <button class="nav-button">Go Back to <%=writer.firstName%> <%=writer.middle%> <%=writer.lastName%>
+        </button>
+    </a>
+    
     </div>
 </body>
 </html>

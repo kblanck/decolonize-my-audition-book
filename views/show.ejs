@@ -8,8 +8,17 @@
     <header>
         <%- include( 'partials/header.ejs' ) %>
     </header>
-    
-    <h2><%=writer.name%></h2>
+
+    <h2>
+        <%=writer.firstName%>
+        <%=writer.middle%>
+        <%=writer.lastName%>
+    </h2>
+
+    <!-- <h5>        
+        <%=writer.firstName%> is <%=writer.addlIdentity%>
+    </h5> -->
+
     <br/>
     <br/>
 
@@ -17,18 +26,38 @@
     <br/>
     <br/>
 
-    <!-- <b>Identity:</b> <%=writer.identity%>
-    <br/> -->
+    <div id="show-little-bio">
+            <div id="known-for">
+                <h5>Known For:</h5>
+                <h6><%=writer.knownFor%></h6>
+            </div>
 
-    <b>Known For:</b> <%=writer.knownFor%>
-    <br/>
-    
-    <%=writer.socials%>     <br/> <br/>
+            <div id="notable-awards">
+                <h5>Notable Awards:</h5>
+                <h6><%=writer.notableAwards%></h6>
+            </div>
+
+            <div id="social-media">
+                <h5>Check out <%=writer.firstName%> on <%=writer.socialType%>:</h5> 
+                <h6><%=writer.socialHandle%></h6>
+            </div>
+    </div>
 
 
-    <nav>
-        <a href="/writers">Back to Writers Index</a>
-    </nav>
+    <div id="edit-delete">
+        <a href="/writers/<%=writer.id%>/edit">
+            <button class="delete">EDIT
+            </button>
+        </a>
+        <form action="/writers/<%=writer.id%>?_method=DELETE" method="POST">
+            <button class="delete" type="submit" value="DELETE" />DELETE</button>
+        </form>
+    </div>
+
+    <a href="/writers/index_<%=writer.identity%>_writers">
+        <button class="nav-button">Back to <%=writer.identity%> Writers
+        </button>
+    </a>
 
 </body>
 </html>

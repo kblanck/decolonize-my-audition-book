@@ -2,41 +2,64 @@ const mongoose = require('mongoose');
 
 const seed = [
     {
-        name: 'Michael R. Jackson',
+        firstName: 'Michael',
+        middle: 'R.',
+        lastName: 'Jackson',
         identity: 'Black',
+        addlIdentity: '',
         knownFor: 'A Strange Loop',
-        // prodYear: 2019,
+        notableAwards: '2020 Pulitzer Prize for Drama',
         youTube: 'https://www.youtube.com/watch?v=ZDLCvVBUBTM',
-        social: 'test'
+        socialType: 'Twitter',
+        socialHandle: '@TheLivingMJ'
     },
     {
-        name: 'Adam Gwon',
+        firstName: 'Adam',
+        middle: '',
+        lastName: 'Gwon',
         identity: 'Asian',
+        addlIdentity: 'Chinese',
         knownFor: 'Ordinary Days',
-        // prodYear: 2019,
+        notableAwards: 'The Kleban Award, The Fred Ebb Award, The Richard Rodgers Award',
         youTube: 'https://www.youtube.com/watch?v=CjGyMlYtzak',
-        social: 'test'
+        socialType: 'Twitter',
+        socialHandle: '@AdamGwon'
     },
     {
-        name: 'Benjamin Velez',
+        firstName: 'Benjamin',
+        middle: '',
+        lastName: 'Velez',
         identity: 'Latinx',
+        addlIdentity: '',
         knownFor: 'Kiss My Aztec',
+        notableAwards: 'The 2019 Fred Ebb Award, the 2020 Jonathan Larson Grant',
         youTube: 'https://www.youtube.com/watch?v=mt0Pi_jXa9M',
-        social: 'test'
+        socialType: 'Instagram',
+        socialHandle: '@benjaminvelezmusic',
     },
     {
-        name: 'Shaun Taylor-Corbett',
+        firstName: 'Shaun',
+        middle: '',
+        lastName: 'Taylor-Corbett',
         identity: 'Indigenous',
+        addlIdentity: '',
         knownFor: 'Distant Thunder',
+        notableAwards: '',
         youTube: 'https://www.youtube.com/watch?v=AWFb2q998q8',
-        social: 'test'
+        socialType: 'Instagram',
+        socialHandle: '@shauntc37'
     },
     {
-        name: 'The Lazours',
+        firstName: 'The Lazours',
+        middle: '',
+        lastName: '',
         identity: 'MENASA',
+        addlIdentity: 'Lebanese',
         knownFor: 'We Live in Cairo',
+        notableAwards: '',
         youTube: 'https://www.youtube.com/watch?v=QQSgowAgWto',
-        social: 'test'
+        socialType: 'Instagram',
+        socialHandle: '@sfrereslazour'
     }
 ];
 
