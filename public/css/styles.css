@@ -277,7 +277,7 @@ select,input:focus {
 
 footer {
     font-size: 1em;
-    padding: 3em;
+    padding: 2em 3em 3em 3em;
     color: black;
 }
 
@@ -286,7 +286,7 @@ footer {
     font-family: Arial;
     font-size: 1.25em;
     color: darkslategray;
-    width: 35%;
+    width: 38%;
     height: 60%;
     line-height: 1.5;
     margin: 2em 0 3em 0;
