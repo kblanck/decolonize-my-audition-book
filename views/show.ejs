@@ -15,6 +15,16 @@
         <%=writer.lastName%>
     </h2>
 
+    <div id="edit-delete">
+        <a href="/writers/<%=writer.id%>/edit">
+            <button class="edit">EDIT
+            </button>
+        </a>
+        <form action="/writers/<%=writer.id%>?_method=DELETE" method="POST">
+            <button class="delete" type="submit" value="DELETE" />DELETE</button>
+        </form>
+    </div>
+
     <!-- <h5>        
         <%=writer.firstName%> is <%=writer.addlIdentity%>
     </h5> -->
@@ -43,16 +53,6 @@
             </div>
     </div>
 
-
-    <div id="edit-delete">
-        <a href="/writers/<%=writer.id%>/edit">
-            <button class="delete">EDIT
-            </button>
-        </a>
-        <form action="/writers/<%=writer.id%>?_method=DELETE" method="POST">
-            <button class="delete" type="submit" value="DELETE" />DELETE</button>
-        </form>
-    </div>
 
     <a href="/writers/index_<%=writer.identity%>_writers">
         <button class="nav-button">Back to <%=writer.identity%> Writers
