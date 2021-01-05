@@ -21,6 +21,13 @@ router.get('/writers/new', (req, res) => {
 });
 
 router.post('/writers', (req, res) => {
+    try {if(req.body.notableAwards) {
+        req.body.notableAwards = true
+      } else {
+      req.body.notableAwards = false
+      }} catch(e) {
+        req.body.notableAwards = false
+      }
     Writer.create(req.body, (error, createdWriter) => {
         res.redirect('/writers')
     })
@@ -105,6 +112,11 @@ router.get('/writers/:id/edit', (req, res) => {
 });
 
 router.put('/writers/:id', (req, res) => {
+    if (req.body.notableAwards === '2020 Pulitzer Prize for Drama') {
+        req.body.notableAwards = true;
+      } else {
+        req.body.notableAwards = false;
+      }
     Writer.findByIdAndUpdate(req.params.id, req.body, (error, updatedModel) => {
         res.redirect('/writers/:id')
     })

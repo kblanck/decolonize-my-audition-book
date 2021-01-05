@@ -33,7 +33,7 @@
     <br/>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=writer.youTube.slice(32)%>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <br/>
+
     <br/>
 
     <div id="show-little-bio">
@@ -42,10 +42,15 @@
                 <h6><%=writer.knownFor%></h6>
             </div>
 
-            <div id="notable-awards">
-                <h5>Notable Awards:</h5>
-                <h6><%=writer.notableAwards%></h6>
-            </div>
+            <% if (writer.notableAwards === false){ %>
+                <div id="notable-awards-false">
+                </div>
+              <% } else { %>
+                <div id="notable-awards">
+                    <h5>Notable Awards:</h5>
+                    <h6><%=writer.notableAwards%></h6>
+                </div>
+              <% } %>
 
             <div id="social-media">
                 <h5>Check out <%=writer.firstName%> on <%=writer.socialType%>:</h5> 
