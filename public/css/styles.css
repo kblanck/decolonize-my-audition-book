@@ -232,9 +232,10 @@ nav {
     margin: 0 2em;
 }
 
-#notable-awards-false {
-    display: none;
+#notable-awards {
+    max-width: 350px;
 }
+
 
 #add-new {
     display: flex;
