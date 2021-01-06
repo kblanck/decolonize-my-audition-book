@@ -66,7 +66,7 @@ router.get('/index_indigenous_writers', (req, res) => {
 });
 
 router.get('/index_latinx_writers', (req, res) => {
-    Writer.find({identity: 'Latinx'}, (error, latinxWriters) => {
+    Writer.find({ identity: 'Latinx' }, (error, latinxWriters) => {
         res.render('index_latinx_writers.ejs', {
             writers: latinxWriters
         })
@@ -74,25 +74,9 @@ router.get('/index_latinx_writers', (req, res) => {
 });
 
 router.get('/index_menasa_writers', (req, res) => {
-    Writer.find({identity: 'MENASA'}, (error, menasaWriters) => {
+    Writer.find({ identity: 'MENASA' }, (error, menasaWriters) => {
         res.render('index_menasa_writers.ejs', {
             writers: menasaWriters
-        })
-    })
-});
-
-// DELETE ROUTE
-router.delete('/:id', (req, res) => {
-    Writer.findByIdAndRemove(req.params.id, (error, data) => {
-        res.redirect('/');
-    })
-});
-
-// SHOW ROUTE
-router.get('/:id', (req, res) => {
-    Writer.findById(req.params.id, (error, foundWriter) => {
-        res.render('show.ejs', {
-            writer: foundWriter
         })
     })
 });
@@ -110,13 +94,24 @@ router.get('/:id/edit', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-    if (req.body.notableAwards === '2020 Pulitzer Prize for Drama') {
-        req.body.notableAwards = true;
-      } else {
-        req.body.notableAwards = false;
-      }
     Writer.findByIdAndUpdate(req.params.id, req.body, (error, updatedModel) => {
-        res.redirect('/:id')
+        res.redirect('/')
+    })
+});
+
+// DELETE ROUTE
+router.delete('/:id', (req, res) => {
+    Writer.findByIdAndRemove(req.params.id, (error, data) => {
+        res.redirect('/');
+    })
+});
+
+// SHOW ROUTE
+router.get('/:id', (req, res) => {
+    Writer.findById(req.params.id, (error, foundWriter) => {
+        res.render('show.ejs', {
+            writer: foundWriter
+        })
     })
 });
 

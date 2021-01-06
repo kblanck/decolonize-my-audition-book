@@ -59,7 +59,7 @@ const seed = [
         notableAwards: '',
         youTube: 'https://www.youtube.com/watch?v=QQSgowAgWto',
         socialType: 'Instagram',
-        socialHandle: 'sfrereslazour'
+        socialHandle: 'frereslazour'
     }
 ];
 

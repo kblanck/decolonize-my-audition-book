@@ -19,14 +19,14 @@
             <span id="identify-label">
                  What's their name? 
             </span></label>
-       <input id="input-name" type="text" name="firstName" placeholder="<%=writer.firstName%>"/>
-       <input id="input-name" type="text" name="middle" placeholder="<%=writer.middle%>"/>
-       <input id="input-name" type="text" name="lastName" placeholder="<%=writer.lastName%>"/><br/>
+       <input id="input-name" type="text" name="firstName" value="<%=writer.firstName%>"/>
+       <input id="input-name" type="text" name="middle" value="<%=writer.middle%>"/>
+       <input id="input-name" type="text" name="lastName" value="<%=writer.lastName%>"/><br/>
         <label for="identity">
             <span id="identify-label">
                  How do they identify? 
             </span></label>
-       <select id="identity" name="identity" placeholder="Identity">
+       <select id="identity" name="identity" value="<%=writer.identity%>">
         <option value="Black">Black</option>
         <option value="Asian">Asian or Asian-American</option>
         <option value="Indigenous">Indigenous</option>
@@ -44,25 +44,25 @@
             <span id="identify-label">
                  What's a musical they're known for?
             </span></label>       
-        <input type="text" name="knownFor" placeholder="<%=writer.knownFor%>" /><br/>
+        <input type="text" name="knownFor" value="<%=writer.knownFor%>" /><br/>
 
         <label for="identity">
             <span id="identify-label">
                  What's a great YouTube clip of their work?
             </span></label>        
-        <input type="text" name="youTube" placeholder="<%=writer.youTube%>" /><br/>
+        <input type="text" name="youTube" value="<%=writer.youTube%>" /><br/>
 
         <label for="identity">
             <span id="identify-label">
                  Any awesome awards they've won?
             </span></label>        
-        <input type="text" name="notableAwards" placeholder="<%=writer.notableAwards%>" /><br/>
+        <input type="text" name="notableAwards" value="<%=writer.notableAwards%>" /><br/>
 
         <label for="socialType">
             <span id="identify-label">
                  What social media do they primarily use?
             </span></label>               
-            <select id="socialType" name="socialType" placeholder="Platform">
+            <select id="socialType" name="socialType" value="Platform">
                 <option value="Twitter" name="socialType">Twitter</option>
                 <option value="Instagram" name="socialType">Instagram</option>
                 <option value="Facebook" name="socialType">Facebook</option>
@@ -72,7 +72,7 @@
                 <span id="identify-label">
                      What's their handle?
                 </span></label>        
-            <input type="text" name="socialHandle" placeholder="<%=writer.socialHandle%>" /><br/>
+            <input type="text" name="socialHandle" value="<%=writer.socialHandle%>" /><br/>
 
         <input id="submit" type="submit" class="button" name="" value="Submit Changes"/>
     </form>
