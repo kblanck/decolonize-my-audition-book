@@ -11,7 +11,7 @@ const seed = [
         notableAwards: '2020 Pulitzer Prize for Drama',
         youTube: 'https://www.youtube.com/watch?v=ZDLCvVBUBTM',
         socialType: 'Twitter',
-        socialHandle: '@TheLivingMJ'
+        socialHandle: 'TheLivingMJ'
     },
     {
         firstName: 'Adam',
@@ -23,7 +23,7 @@ const seed = [
         notableAwards: 'The Kleban Award, The Fred Ebb Award, The Richard Rodgers Award',
         youTube: 'https://www.youtube.com/watch?v=CjGyMlYtzak',
         socialType: 'Twitter',
-        socialHandle: '@AdamGwon'
+        socialHandle: 'AdamGwon'
     },
     {
         firstName: 'Benjamin',
@@ -35,7 +35,7 @@ const seed = [
         notableAwards: 'The 2019 Fred Ebb Award, the 2020 Jonathan Larson Grant',
         youTube: 'https://www.youtube.com/watch?v=mt0Pi_jXa9M',
         socialType: 'Instagram',
-        socialHandle: '@benjaminvelezmusic',
+        socialHandle: 'benjaminvelezmusic',
     },
     {
         firstName: 'Shaun',
@@ -47,7 +47,7 @@ const seed = [
         notableAwards: '',
         youTube: 'https://www.youtube.com/watch?v=AWFb2q998q8',
         socialType: 'Instagram',
-        socialHandle: '@shauntc37'
+        socialHandle: 'shauntc37'
     },
     {
         firstName: 'The Lazours',
@@ -59,17 +59,8 @@ const seed = [
         notableAwards: '',
         youTube: 'https://www.youtube.com/watch?v=QQSgowAgWto',
         socialType: 'Instagram',
-        socialHandle: '@sfrereslazour'
+        socialHandle: 'sfrereslazour'
     }
 ];
 
-// const asianWriters = seed.filter((writer) => {
-//     if (writer.identity === 'Asian') {
-//         return writer
-//     }
-// });
-
-// console.log(asianWriters);
-
 module.exports = seed;
-// module.exports = asianWriters;

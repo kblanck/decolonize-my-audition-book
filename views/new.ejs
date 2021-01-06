@@ -14,7 +14,7 @@
     </h2>
 
     <div id="add-new">
-    <form action="/writers" method="POST">
+    <form action="/" method="POST">
         <label for="identity">
             <span id="identify-label">
                  What's their name? 
@@ -63,16 +63,16 @@
                  What social media do they primarily use?
             </span></label>               
             <select id="socialType" name="socialType" placeholder="Platform">
-                <option value="Twitter" name="socialType">Twitter</option>
-                <option value="Instagram" name="socialType">Instagram</option>
-                <option value="Facebook" name="socialType">Facebook</option>
+                <option value="Twitter" id="Twitter" name="socialType">Twitter</option>
+                <option value="Instagram" id="Instagram" name="socialType">Instagram</option>
+                <option value="Facebook" id="Facebook" name="socialType">Facebook</option>
               </select>
 
               <label for="identity">
                 <span id="identify-label">
                      What's their handle?
                 </span></label>        
-            <input type="text" name="socialHandle" placeholder="@" /><br/>
+            <input type="text" name="socialHandle" placeholder="" /><br/>
 
         <input id="submit" type="submit" class="button" name="" value="Add New Writer"/>
     </form>

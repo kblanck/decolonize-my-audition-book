@@ -21,13 +21,11 @@ router.get('/new', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    try {if(req.body.notableAwards) {
-        req.body.notableAwards = true
-      } else {
-      req.body.notableAwards = false
-      }} catch(e) {
-        req.body.notableAwards = false
-      }
+    if (req.body.socialType === "Twitter" || "Instagram" || "Facebook") {
+        if (req.body.socialHandle.includes("@")) {
+            req.body.socialHandle = req.body.socialHandle.substring(1)
+        }
+    }
     Writer.create(req.body, (error, createdWriter) => {
         res.redirect('/')
     })

@@ -16,18 +16,14 @@
     </h2>
 
     <div id="edit-delete">
-        <a href="/writers/<%=writer.id%>/edit">
+        <a href="/<%=writer.id%>/edit">
             <button class="edit">EDIT
             </button>
         </a>
-        <form action="/writers/<%=writer.id%>?_method=DELETE" method="POST">
+        <form action="/<%=writer.id%>?_method=DELETE" method="POST">
             <button class="delete" type="submit" value="DELETE" />DELETE</button>
         </form>
     </div>
-
-    <!-- <h5>        
-        <%=writer.firstName%> is <%=writer.addlIdentity%>
-    </h5> -->
 
     <br/>
     <br/>
@@ -42,10 +38,7 @@
                 <h6><%=writer.knownFor%></h6>
             </div>
 
-            <% if (writer.notableAwards === false){ %>
-                <div id="notable-awards-false">
-                </div>
-              <% } else { %>
+            <% if (writer.notableAwards.length > 0){ %>
                 <div id="notable-awards">
                     <h5>Notable Awards:</h5>
                     <h6><%=writer.notableAwards%></h6>
@@ -53,8 +46,27 @@
               <% } %>
 
             <div id="social-media">
-                <h5>Check out <%=writer.firstName%> on <%=writer.socialType%>:</h5> 
-                <h6><%=writer.socialHandle%></h6>
+                <h5>Check out <%=writer.firstName%> on <%=writer.socialType%>:</h5>
+
+                <% if (writer.socialType === "Twitter"){ %>
+                    <h6>
+                        <a href="http://twitter.com/<%=writer.socialHandle%>"target="_blank">
+                            @<%=writer.socialHandle%>
+                        </a>
+                    </h6>
+                <% } else if (writer.socialType === "Instagram") { %>
+                    <h6>
+                        <a href="http://instagram.com/<%=writer.socialHandle%>"target="_blank">
+                           @<%=writer.socialHandle%>
+                        </a>
+                    </h6>
+                <% } else { %>
+                    <h6>
+                        <a href="http://facebook.com/<%=writer.socialHandle%>"target="_blank">
+                            @<%=writer.socialHandle%>
+                        </a>
+                    </h6>     
+                <% } %>                  
             </div>
     </div>
 
