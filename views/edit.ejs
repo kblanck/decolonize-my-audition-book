@@ -14,7 +14,7 @@
     </h2>
 
     <div id="add-new">
-    <form action="/writers/<%=writer.id%>?_method=PUT" method="POST">
+    <form action="/<%=writer.id%>?_method=PUT" method="POST">
         <label for="identity">
             <span id="identify-label">
                  What's their name? 
@@ -44,19 +44,19 @@
             <span id="identify-label">
                  What's a musical they're known for?
             </span></label>       
-        <input type="text" name="knownFor" placeholder="" /><br/>
+        <input type="text" name="knownFor" placeholder="<%=writer.knownFor%>" /><br/>
 
         <label for="identity">
             <span id="identify-label">
                  What's a great YouTube clip of their work?
             </span></label>        
-        <input type="text" name="youTube" placeholder="" /><br/>
+        <input type="text" name="youTube" placeholder="<%=writer.youTube%>" /><br/>
 
         <label for="identity">
             <span id="identify-label">
                  Any awesome awards they've won?
             </span></label>        
-        <input type="text" name="notableAwards" placeholder="" /><br/>
+        <input type="text" name="notableAwards" placeholder="<%=writer.notableAwards%>" /><br/>
 
         <label for="socialType">
             <span id="identify-label">
@@ -72,7 +72,7 @@
                 <span id="identify-label">
                      What's their handle?
                 </span></label>        
-            <input type="text" name="socialHandle" placeholder="@" /><br/>
+            <input type="text" name="socialHandle" placeholder="<%=writer.socialHandle%>" /><br/>
 
         <input id="submit" type="submit" class="button" name="" value="Submit Changes"/>
     </form>
