@@ -236,7 +236,6 @@ nav {
     max-width: 350px;
 }
 
-
 #add-new {
     display: flex;
     flex-direction: column;
@@ -301,7 +300,7 @@ footer {
 #phrase {
     font-weight: bold;
     text-transform: uppercase;
-    color: #250728;
+    color: #65183e;
 }
 
 section {
