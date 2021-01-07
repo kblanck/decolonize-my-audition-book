@@ -388,7 +388,7 @@ textarea:focus {
     }
 
     h1 {
-        font-size: 1.6em;
+        font-size: 1.55em;
     }
 
     #show-page-h1 {
@@ -412,7 +412,7 @@ textarea:focus {
     .button {
         margin-top: .5em;
         width: 75%;
-        font-size: 1.10em;
+        font-size: .8em;
     }
 
     .button-name {
