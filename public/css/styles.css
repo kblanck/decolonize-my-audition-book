@@ -384,15 +384,15 @@ textarea:focus {
     }
 
     h1 > span {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     h1 {
-        font-size: 1.7em;
+        font-size: 1.6em;
     }
 
     #show-page-h1 {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
     h2 {
@@ -400,7 +400,7 @@ textarea:focus {
     }
 
     h3 {
-        font-size: .9em;
+        font-size: .8em;
         margin-bottom: 0;
     }
 
