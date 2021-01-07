@@ -229,11 +229,8 @@ nav {
 #known-for, #notable-awards, #social-media {
     display: flex;
     flex-direction: column;
-    margin: 0 2em;
-}
-
-#notable-awards {
     max-width: 350px;
+    margin: 0 2em;
 }
 
 #add-new {
